@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        int altura1 = 4;//Integer.parseInt(System.console().readLine("Introduzca la altura de la primera pirámide: "));
-        int altura2 = 8;//Integer.parseInt(System.console().readLine("Introduzca la altura de la segunda pirámide: "));
+        int altura1 = Integer.parseInt(System.console().readLine("Introduzca la altura de la primera pirámide: "));
+        int altura2 = Integer.parseInt(System.console().readLine("Introduzca la altura de la segunda pirámide: "));
 
         int central = 0;
         int saltos = 0;
@@ -35,15 +35,17 @@ public class App {
         }else {
             central = altura2;
             saltos = altura2 - altura1;
+            int delante = 0;
             while (aux2 > 0) {                
                 if (saltos > 0) {
-                     for (int i = 1; i <= (central - fila); i++)
+                     for (int i = 0; i <= delante; i++)
                         System.out.print(" ");
                     for (int i = 0; i < (2 * (central - fila) + 1); i++)
                         System.out.print(" ");
                     for (int i = 0; i < (2 * fila - 1); i++)
                         System.out.print("*");
                     System.out.println();
+                    delante++;
                 }else {
                     fila2 = fila - (altura2 - altura1);
                     for (int i = 1; i <= (altura1 - fila2); i++)
