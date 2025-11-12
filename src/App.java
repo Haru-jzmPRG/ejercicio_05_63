@@ -10,7 +10,7 @@ public class App {
         int fila = 1;
         int fila2 = 1;
 
-        if (altura1 > altura2) {
+        if (altura1 >= altura2) {
             central = altura1;
             saltos = altura1 - altura2;
             while (aux1 > 0) {
